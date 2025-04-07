@@ -14,7 +14,7 @@ const Button: React.FC<Props> = ({ type, children }) => {
   // JSX
   if (type === "primary") {
     return (
-      <button className="bg-sky-500  px-[10px] py-[5px] rounded-md  active:bg-sky-700 cursor-pointer">
+      <button className="cursor-pointer rounded-md bg-sky-500 px-[10px] py-[5px] font-semibold text-white transition-colors duration-200 ease-in-out outline-none active:bg-sky-600">
         <Typography>{children}</Typography>
       </button>
     );
