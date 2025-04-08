@@ -17,7 +17,9 @@ const LandingPageHeader: React.FC = () => {
         <div>
           <Button type="primary">Sign in</Button>
         </div>
-        <div>sign up</div>
+        <div>
+          <Button type="secondary">Sign up</Button>
+        </div>
       </div>
     </header>
   );

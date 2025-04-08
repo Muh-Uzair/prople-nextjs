@@ -19,6 +19,13 @@ const Button: React.FC<Props> = ({ type, children }) => {
       </button>
     );
   }
+  if (type === "secondary") {
+    return (
+      <button className="cursor-pointer rounded-md border-[1px] border-sky-500 bg-sky-50 px-[9px] py-[4px] font-semibold text-sky-500 transition-colors duration-200 ease-in-out outline-none active:bg-sky-100/90">
+        <Typography>{children}</Typography>
+      </button>
+    );
+  }
 };
 
 export default Button;
