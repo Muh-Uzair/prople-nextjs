@@ -1,41 +1,15 @@
 import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
 import "@styles/globals.css";
-import localFont from "next/font/local";
 
-export const roboto = localFont({
-  src: [
-    {
-      path: "../../.././public/fonts/roboto/Roboto-Thin.ttf", // Weight 100
-      weight: "100",
-      style: "normal",
-    },
-    {
-      path: "../../.././public/fonts/roboto/Roboto-Light.ttf", // Weight 300
-      weight: "300",
-      style: "normal",
-    },
-    {
-      path: "../../.././public/fonts/roboto/Roboto-Regular.ttf", // Weight 400 (normal)
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../../.././public/fonts/roboto/Roboto-Medium.ttf", // Weight 500
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "../../.././public/fonts/roboto/Roboto-Bold.ttf", // Weight 700
-      weight: "700",
-      style: "normal",
-    },
-    {
-      path: "../../.././public/fonts/roboto/Roboto-Black.ttf", // Weight 900
-      weight: "900",
-      style: "normal",
-    },
-  ],
-  variable: "--font-roboto", // To use the font globally in the app
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -49,9 +23,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={roboto.variable}>
-      <body className="antialiased">
-        <p className="font-roboto">Hello</p>
+    <html lang="en">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
         {children}
       </body>
     </html>
