@@ -1,15 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "@styles/globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+export const roboto = Roboto({
+  variable: "--font-roboto",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["100", "300", "400", "600", "700", "900"],
+  adjustFontFallback: true, // default is "Arial" if set to false
+  fallback: ["system-ui", "sans-serif"], // customize fallback stack
 });
 
 export const metadata: Metadata = {
@@ -23,12 +21,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+    <html lang="en" className={`${roboto.variable}`}>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }

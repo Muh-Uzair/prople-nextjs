@@ -6,7 +6,7 @@ const PropleWrittenLogo: React.FC = () => {
   // FUNCTIONS
 
   // JSX
-  return <div className="text-[20px] font-bold text-sky-500">PROPLE</div>;
+  return <div className="text-[20px] font-[700] text-sky-500">PROPLE</div>;
 };
 
 export default PropleWrittenLogo;
