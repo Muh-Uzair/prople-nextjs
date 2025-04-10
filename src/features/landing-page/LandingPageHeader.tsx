@@ -10,9 +10,7 @@ const LandingPageHeader: React.FC = () => {
   // JSX
   return (
     <header className="flex h-[50px] items-center justify-between border-b-[0.5px] border-sky-200 bg-stone-50 px-[10px]">
-      <div>
-        <PropleWrittenLogo />
-      </div>
+      <PropleWrittenLogo />
       <AuthSection />
     </header>
   );
