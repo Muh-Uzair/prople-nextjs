@@ -1,6 +1,6 @@
-import Button from "@/ui/Button";
 import PropleWrittenLogo from "@/ui/PropleWrittenLogo";
 import React from "react";
+import AuthSection from "./AuthSection";
 
 const LandingPageHeader: React.FC = () => {
   // VARS
@@ -13,14 +13,7 @@ const LandingPageHeader: React.FC = () => {
       <div>
         <PropleWrittenLogo />
       </div>
-      <div className="flex gap-[10px]">
-        <div>
-          <Button type="primary">Sign in</Button>
-        </div>
-        <div>
-          <Button type="secondary">Sign up</Button>
-        </div>
-      </div>
+      <AuthSection />
     </header>
   );
 };
