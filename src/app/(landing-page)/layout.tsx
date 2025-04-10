@@ -1,13 +1,56 @@
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
 import "@styles/globals.css";
 
-export const roboto = Roboto({
+// import { Roboto } from "next/font/google";
+// export const roboto = Roboto({
+//   variable: "--font-roboto",
+//   subsets: ["latin"],
+//   weight: ["100", "300", "400", "600", "700", "900"],
+//   adjustFontFallback: true, // default is "Arial" if set to false
+//   fallback: ["system-ui", "sans-serif"], // customize fallback stack
+// });
+
+import localFont from "next/font/local";
+
+export const roboto = localFont({
+  src: [
+    {
+      path: "../../../public/fonts/roboto/Roboto-Black.ttf",
+      weight: "900",
+      style: "normal",
+    },
+    {
+      path: "../../../public/fonts/roboto/Roboto-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../../../public/fonts/roboto/Roboto-SemiBold.ttf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../../../public/fonts/roboto/Roboto-Medium.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../../../public/fonts/roboto/Roboto-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../../public/fonts/roboto/Roboto-Light.ttf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../../../public/fonts/roboto/Roboto-Thin.ttf",
+      weight: "100",
+      style: "normal",
+    },
+  ],
   variable: "--font-roboto",
-  subsets: ["latin"],
-  weight: ["100", "300", "400", "600", "700", "900"],
-  adjustFontFallback: true, // default is "Arial" if set to false
-  fallback: ["system-ui", "sans-serif"], // customize fallback stack
 });
 
 export const metadata: Metadata = {
@@ -21,8 +64,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${roboto.variable}`}>
-      <body className="antialiased">{children}</body>
+    <html lang="en">
+      <body className={roboto.variable}>{children}</body>
     </html>
   );
 }
