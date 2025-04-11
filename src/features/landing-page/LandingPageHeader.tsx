@@ -2,7 +2,7 @@ import PropleWrittenLogo from "@/ui/PropleWrittenLogo";
 import React from "react";
 import AuthSection from "./AuthSection";
 
-const LandingPageHeader: React.FC = () => {
+const LandingPageHeader = () => {
   // VARS
 
   // FUNCTIONS

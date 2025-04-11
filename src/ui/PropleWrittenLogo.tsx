@@ -1,6 +1,6 @@
 import React from "react";
 
-const PropleWrittenLogo: React.FC = () => {
+const PropleWrittenLogo = () => {
   // VARS
 
   // FUNCTIONS
