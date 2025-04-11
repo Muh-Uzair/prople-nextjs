@@ -5,7 +5,7 @@ import SignInDialogue from "./SignInDialogue";
 
 // landing-auth
 
-const AuthSection: React.FC = () => {
+const AuthSection = () => {
   // VARS
 
   // FUNCTIONS

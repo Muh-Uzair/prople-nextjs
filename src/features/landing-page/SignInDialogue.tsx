@@ -12,7 +12,7 @@ import {
 } from "@/ui/shadcn-ui/dialog";
 import GoogleSignIn from "./GoogleSignIn";
 
-const SignInDialogue: React.FC = () => {
+const SignInDialogue = () => {
   // VARS
 
   // FUNCTIONS
