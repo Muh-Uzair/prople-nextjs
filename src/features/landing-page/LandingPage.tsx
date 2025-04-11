@@ -5,7 +5,7 @@ const LandingPage = () => {
   return (
     <div>
       <LandingPageHeader />
-      <main className="p-[10px]">all properties</main>
+      <main className="p-[10px]">landing page</main>
     </div>
   );
 };
