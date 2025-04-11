@@ -2,7 +2,7 @@
 "use client";
 
 import React from "react";
-import { googleSignInAction } from "./google-sign-in-server";
+import { googleSignInAction } from "@/actions/google-sign-in";
 import Button from "@/ui/Button";
 
 const GoogleSignIn = () => {
