@@ -1,6 +1,5 @@
-"use client"
+"use client";
 import React from "react";
-import Button from "@/ui/Button";
 
 import {
   Dialog,
@@ -22,7 +21,7 @@ const SignInDialogue = () => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="primary">Sign in</Button>
+        <button>Signin</button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
@@ -46,7 +45,7 @@ const SignInDialogue = () => {
         <DialogFooter>
           <div className="grid w-full grid-rows-2 gap-[10px]">
             <div>
-              <Button fullWidth={true}>Sign in with Property Id</Button>
+              <button>Sign in with Property Id</button>
             </div>
             <div>
               <GoogleSignIn />

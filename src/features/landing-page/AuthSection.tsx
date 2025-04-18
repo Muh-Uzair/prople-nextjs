@@ -1,5 +1,4 @@
 "use client";
-import Button from "@/ui/Button";
 import React from "react";
 import SignInDialogue from "./SignInDialogue";
 import Image from "next/image";
@@ -71,7 +70,7 @@ const AuthSection = () => {
           <SignInDialogue />
         </div>
         <div>
-          <Button variant="secondary">Sign up</Button>
+          <button>Sign out</button>
         </div>
       </div>
     </div>
