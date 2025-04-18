@@ -82,3 +82,5 @@ const AuthSection = () => {
 };
 
 export default AuthSection;
+
+// updated shadcn
