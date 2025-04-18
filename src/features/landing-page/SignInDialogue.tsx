@@ -11,6 +11,9 @@ import {
   DialogTrigger,
 } from "@/ui/shadcn-ui/dialog";
 import GoogleSignIn from "./GoogleSignIn";
+import { Button } from "@/ui/shadcn-ui/button";
+import { Label } from "@/ui/shadcn-ui/label";
+import { Input } from "@/ui/shadcn-ui/input";
 
 const SignInDialogue = () => {
   // VARS
@@ -21,7 +24,7 @@ const SignInDialogue = () => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <button>Signin</button>
+        <Button>Sign in</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
@@ -33,19 +36,19 @@ const SignInDialogue = () => {
         </DialogHeader>
         <div className="grid grid-rows-2 gap-[10px]">
           <div>
-            <label>Property Id</label> <br />
-            <input type="text" className="w-[100%] border-[1px]" />
+            <Label>Property Id</Label>
+            <Input type="text" className="w-[100%] border-[1px]" />
           </div>
 
           <div>
-            <label>Property Id</label> <br />
-            <input type="password" className="w-[100%] border-[1px]" />
+            <Label>Password</Label>
+            <Input type="text" className="w-[100%] border-[1px]" />
           </div>
         </div>
         <DialogFooter>
           <div className="grid w-full grid-rows-2 gap-[10px]">
             <div>
-              <button>Sign in with Property Id</button>
+              <Button className="w-full">Sign in with Property Id</Button>
             </div>
             <div>
               <GoogleSignIn />

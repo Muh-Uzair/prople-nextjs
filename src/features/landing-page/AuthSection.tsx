@@ -14,6 +14,7 @@ import {
   DialogTrigger,
 } from "@/ui/shadcn-ui/dialog";
 import { signOut } from "next-auth/react";
+import { Button } from "@/ui/shadcn-ui/button";
 
 // landing-auth
 
@@ -53,9 +54,12 @@ const AuthSection = () => {
             <div className="grid grid-cols-4 items-center gap-4">Hello</div>
           </div>
           <DialogFooter>
-            <button onClick={() => signOut({ callbackUrl: "/" })}>
+            <Button
+              className="w-full"
+              onClick={() => signOut({ callbackUrl: "/" })}
+            >
               Sign out
-            </button>
+            </Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>
@@ -70,7 +74,7 @@ const AuthSection = () => {
           <SignInDialogue />
         </div>
         <div>
-          <button>Sign out</button>
+          <Button variant="outline">Sign up</Button>
         </div>
       </div>
     </div>
